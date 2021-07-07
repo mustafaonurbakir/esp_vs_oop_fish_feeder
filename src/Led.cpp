@@ -1,25 +1,25 @@
 #include "Led.h"
 
 Led::Led(byte pin) {
-  this->pin = pin;
-  init();
+	this->pin = pin;
+	init();
 }
 
 void Led::init() {
-  Serial.println("led initializer");
-  pinMode(pin, OUTPUT);
-  off();
+	Serial.println("led initializer");
+	pinMode(pin, OUTPUT);
+	off();
 }
 
 void Led::on() {
-  digitalWrite(pin, HIGH);
+  	digitalWrite(pin, HIGH);
 }
 
 void Led::off() {
-  digitalWrite(pin, LOW);
+  	digitalWrite(pin, LOW);
 }
 
 bool Led::getStatus() {
-  return digitalRead(pin);
+  	return digitalRead(pin);
 }
 

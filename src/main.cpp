@@ -113,7 +113,6 @@ void loop() {
 	//every minute
 	if(millis() - lastMinuteControlTime > 1000 * 60) {
 		lastMinuteControlTime = millis();
-		Serial.println(String(millis()));
 		remainingFeedingTime-- ;
 		EEPROM.write(REMAINING_TIME_EEPROM_ADDRESS, remainingFeedingTime);
 		EEPROM.commit();
@@ -126,6 +125,8 @@ void loop() {
 		fishFeeder.nextHole();
 		resetTimer();
 		display->setHoleNo(fishFeeder.getHoleNo());
+		Serial.println("Feeding...");
+		Serial.println("New hole no: " + String(fishFeeder.getHoleNo()));
 	}
 }
 

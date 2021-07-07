@@ -1,16 +1,16 @@
 #include "Lcd.h"
 
 void Lcd::setup(Adafruit_SSD1306 display) {
-  this->myDisplay = display;
-  init();
+    this->myDisplay = display;
+    init();
 }
 
 void Lcd::init() {
-  myDisplay.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32);
-  myDisplay.display();
-  myDisplay.clearDisplay();
-  myDisplay.display();
-}
+    myDisplay.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32);
+    myDisplay.display();
+    myDisplay.clearDisplay();
+    myDisplay.display();
+    }
 
 void Lcd::clearDisplay(){
     myDisplay.clearDisplay();
@@ -31,22 +31,22 @@ void Lcd::showOnOffInfo() {
     
     unsigned char sun_icon16x16[] =
     {
-	0b00000000, 0b00000000, //                 
-	0b00000011, 0b11100000, //       #####     
-	0b00000100, 0b00010000, //      #     #    
-	0b00001000, 0b00001000, //     #       #   
-	0b00010000, 0b00000100, //    #         #  
-	0b00010000, 0b00000100, //    #         #  
-	0b00010000, 0b00000100, //    #         #  
-	0b00010000, 0b00000100, //    #         #  
-	0b00010000, 0b00000100, //    #         #  
-	0b00001000, 0b00001000, //     #       #   
-	0b00000100, 0b00010000, //      #     #    
-	0b00000011, 0b11100000, //       #####     
-	0b00000010, 0b00100000, //       #   #     
-	0b00000011, 0b11100000, //       #####     
-	0b00000010, 0b00100000, //       #   #     
-	0b00000011, 0b11100000, //       #####   
+        0b00000000, 0b00000000, //                 
+        0b00000011, 0b11100000, //       #####     
+        0b00000100, 0b00010000, //      #     #    
+        0b00001000, 0b00001000, //     #       #   
+        0b00010000, 0b00000100, //    #         #  
+        0b00010000, 0b00000100, //    #         #  
+        0b00010000, 0b00000100, //    #         #  
+        0b00010000, 0b00000100, //    #         #  
+        0b00010000, 0b00000100, //    #         #  
+        0b00001000, 0b00001000, //     #       #   
+        0b00000100, 0b00010000, //      #     #    
+        0b00000011, 0b11100000, //       #####     
+        0b00000010, 0b00100000, //       #   #     
+        0b00000011, 0b11100000, //       #####     
+        0b00000010, 0b00100000, //       #   #     
+        0b00000011, 0b11100000, //       #####   
     };
     unsigned char empyt_icon[] =
     {
@@ -72,7 +72,7 @@ void Lcd::showOnOffInfo() {
 }
 
 void Lcd::showConnectionInfo() {
-  myDisplay.println("Connect...");
+    myDisplay.println("Connect...");
 }
 
 
