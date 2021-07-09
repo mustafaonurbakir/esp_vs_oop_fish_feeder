@@ -21,6 +21,24 @@ https://user-images.githubusercontent.com/23248283/124842529-68ba6080-df98-11eb-
 - Find chatId
 - Fill Config.h file 
 
+### Connections ###
+
+| Servo         | ESP32         |
+| ------------- | ------------- |
+| Brown         | GND           |
+| Red           | Vin           |
+| Orange        | D13           |
+
+
+| LCD           | ESP32         |
+| ------------- | ------------- |
+| GND           | GND           |
+| VCC           | 3v3           |
+| SCL           | D22           |
+| SDA           | D21           |
+
+
+
 .
 .
 .
